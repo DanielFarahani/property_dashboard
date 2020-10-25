@@ -1,0 +1,43 @@
+# -*- encoding: utf-8 -*-
+from flask import Flask, url_for
+from flask_login import LoginManager
+from flask_sqlalchemy import SQLAlchemy
+from importlib import import_module
+from logging import basicConfig, DEBUG, getLogger, StreamHandler
+from os import path
+
+db = SQLAlchemy() # TODO put this in model
+login_manager = LoginManager()
+
+# regiser db and app
+def register_extensions(app):
+    db.init_app(app)
+    login_manager.init_app(app)
+
+# register pages base and home
+def register_blueprints(app):
+    for module_name in ('base', 'home'):
+        module = import_module('app.{}.routes'.format(module_name))
+        app.register_blueprint(module.blueprint)
+
+# DB setup?
+def configure_database(app):
+    @app.before_first_request
+    def initialize_database():
+        db.create_all()
+
+    @app.teardown_request
+    def shutdown_session(exception=None):
+        db.session.remove()
+
+# app factory
+def create_app(config):
+    app = Flask(__name__, static_folder='base/static')
+    app.config.from_object(config)
+
+    # registers
+    register_extensions(app)
+    register_blueprints(app)
+    configure_database(app)
+    
+    return app
