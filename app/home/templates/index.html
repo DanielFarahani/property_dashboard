@@ -10,7 +10,44 @@
 					<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
 				</div>
 				<div class="ml-md-auto py-2 py-md-0">
-					<a href="#" class="btn btn-secondary btn-round">Add Property</a>
+					<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
+						<i class="fa fa-plus"></i>
+						Add Property
+					</button>
+				</div>
+				<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header no-bd">
+								<h5 class="modal-title">
+									<span class="fw-mediumbold">
+										New Property
+									</span> 
+								</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="small">Add a new property by entering the address</p>
+								<!-- Form -->
+								<form>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group form-group-default">
+												<label>Address</label>
+												<input id="addAddress" type="text" class="form-control" placeholder="Enter address">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer no-bd">
+								<button type="button" id="addRowButton" class="btn btn-primary">Add</button>
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
