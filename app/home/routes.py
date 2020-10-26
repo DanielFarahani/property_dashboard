@@ -39,7 +39,8 @@ def route_template(template):
 @blueprint.route('/properties', methods=['GET'])
 @login_required
 def properties():
-    pass
+    return render_template('page-404.html'), 404
+  
 
 # Helper - Extract current page name from request 
 def get_segment(request): 
