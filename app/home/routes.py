@@ -1,9 +1,15 @@
 # -*- encoding: utf-8 -*-
+import sys
 from app.home import blueprint
 from flask import render_template, redirect, url_for, request
 from flask_login import login_required, current_user
 from app import login_manager
 from jinja2 import TemplateNotFound
+
+
+# localy importing corelogic wrapper remove in production
+sys.path.append("/Users/df/other/corelogic_pyclient")
+from corelogic.property import (suggest, search, valuations)
 
 @blueprint.route('/index')
 @login_required
@@ -29,6 +35,11 @@ def route_template(template):
     except:
         return render_template('page-500.html'), 500
 
+
+@blueprint.route('/properties', methods=['GET'])
+@login_required
+def properties():
+    pass
 
 # Helper - Extract current page name from request 
 def get_segment(request): 

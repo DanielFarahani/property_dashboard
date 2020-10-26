@@ -29,21 +29,28 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return str(self.username)
 
+
 class Properties(db.Model):
     __tablename__ = 'Properties'
-    id = Column(Integer, primary_key=True)
+    propertyId = Column(Integer, primary_key=True)
     address = Column(String)
-    bedrooms = Column(int)
-    bathrooms = Column(int)
-    carSpaces = Column(int)
-    floorAreaM2 = Column(int)
-    landAreaM2 = Column(int)
+    bedrooms = Column(Integer)
+    bathrooms = Column(Integer)
+    carSpaces = Column(Integer)
+    floorAreaM2 = Column(Integer)
+    landAreaM2 = Column(Integer)
     propertyType = Column(String)
     saleDate = Column(DateTime)
-    salePrice = Column(int)
+    salePrice = Column(Integer)
     valuationDate = Column(DateTime)
     yearBuilt = Column(DateTime)
 
+
+class Ownership(db.Model):
+    __tablename__ = 'Ownership'
+    id = Column(Integer, primary_key=True)
+    user_id = db.Column(Integer, db.ForeignKey('User.id'))
+    property_id = db.Column(Integer, db.ForeignKey('Properties.propertyId'))
 
 @login_manager.user_loader
 def user_loader(id):
