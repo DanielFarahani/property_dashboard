@@ -13,51 +13,51 @@ from corelogic.property import (suggest, search, valuations)
 @blueprint.route('/index')
 @login_required
 def index():
-    return render_template('index.html', segment='index')
+  return render_template('index.html', segment='index')
 
 
 @blueprint.route('/<template>')
 @login_required
 def route_template(template):
-    try:
-        if not template.endswith( '.html' ):
-            template += '.html'
+  try:
+    if not template.endswith( '.html' ):
+        template += '.html'
 
-        # Detect the current page
-        segment = get_segment(request)
+    # Detect the current page
+    segment = get_segment(request)
 
-        # Serve the file (if exists) from app/templates/FILE.html
-        return render_template(template, segment=segment)
+    # Serve the file (if exists) from app/templates/FILE.html
+    return render_template(template, segment=segment)
 
-    except TemplateNotFound:
-        return render_template('page-404.html'), 404
-    except:
-        return render_template('page-500.html'), 500
+  except TemplateNotFound:
+    return render_template('page-404.html'), 404
+  except:
+    return render_template('page-500.html'), 500
 
 
 @blueprint.route('/properties', methods=['GET'])
 @login_required
 def properties():
-    return render_template('page-404.html'), 404
+  return render_template('page-404.html'), 404
 
 # TODO handle the new address form (GET or POST?)
 """
 @blueprint.route('/index', methods=['POST'])
 @login_required
 def properties(address):
-    address = requst.form.json()
-    cl_search = search.Search()
-    res = cl.search.search_properties(address)
+  address = requst.form.json()
+  cl_search = search.Search()
+  res = cl.search.search_properties(address)
 
-    return render_template('page-404.html'), 404  
+  return render_template('page-404.html'), 404  
 """
 
 # Helper - Extract current page name from request 
 def get_segment(request): 
-    try:
-        segment = request.path.split('/')[-1]
-        if segment == '':
-            segment = 'index'
-        return segment    
-    except:
-        return None  
+  try:
+    segment = request.path.split('/')[-1]
+    if segment == '':
+        segment = 'index'
+    return segment    
+  except:
+    return None  
