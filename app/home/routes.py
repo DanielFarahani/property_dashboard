@@ -6,7 +6,6 @@ from flask_login import login_required, current_user
 from app import login_manager
 from jinja2 import TemplateNotFound
 
-
 # localy importing corelogic wrapper remove in production
 sys.path.append("/Users/df/other/corelogic_pyclient")
 from corelogic.property import (suggest, search, valuations)
@@ -40,7 +39,18 @@ def route_template(template):
 @login_required
 def properties():
     return render_template('page-404.html'), 404
-  
+
+# TODO handle the new address form (GET or POST?)
+"""
+@blueprint.route('/index', methods=['POST'])
+@login_required
+def properties(address):
+    address = requst.form.json()
+    cl_search = search.Search()
+    res = cl.search.search_properties(address)
+
+    return render_template('page-404.html'), 404  
+"""
 
 # Helper - Extract current page name from request 
 def get_segment(request): 

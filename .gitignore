@@ -1,6 +1,7 @@
 # byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+temp_notes.txt
 
 # tests and coverage
 *.pytest_cache

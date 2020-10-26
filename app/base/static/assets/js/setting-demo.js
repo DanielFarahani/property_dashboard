@@ -1,7 +1,6 @@
 "use strict";
 
 // Setting Color
-
 $(window).resize(function() {
 	$(window).width(); 
 });
