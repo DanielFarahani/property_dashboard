@@ -16,6 +16,7 @@ temp_notes.txt
 env
 venv
 clistart.sh
+zDev_tools
 
 # other
 .DS_Store

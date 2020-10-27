@@ -33,7 +33,6 @@ class User(db.Model, UserMixin):
 class Properties(db.Model):
     __tablename__ = 'Properties'
     propertyId = Column(Integer, primary_key=True)
-    address = Column(String)
     bedrooms = Column(Integer)
     bathrooms = Column(Integer)
     carSpaces = Column(Integer)
@@ -45,6 +44,14 @@ class Properties(db.Model):
     valuationDate = Column(DateTime)
     yearBuilt = Column(DateTime)
 
+class Address(db.Model):
+    __tablename__ = 'Address'
+    property_id = db.Column(Integer, db.ForeignKey('Properties.propertyId'), primary_key=True)
+    address = Column(String)
+    street = Column(String)
+    suburb = Column(String)
+    state = Column(String)
+    postcode = Column(Integer)
 
 class Ownership(db.Model):
     __tablename__ = 'Ownership'
