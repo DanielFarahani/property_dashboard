@@ -3,30 +3,34 @@ import sys
 from app.home import blueprint
 from flask import render_template, redirect, url_for, request
 from flask_login import login_required, current_user
-from app import login_manager
+from app import login_manager, db
 from jinja2 import TemplateNotFound
-from app.models import User, Properties, Address, Ownership
+from app.models import User, Properties, Address
 
 # localy importing corelogic wrapper remove in production
 sys.path.append("/Users/df/other/corelogic_pyclient")
 from corelogic.property import (suggest, search, valuations)
 
-@blueprint.route('/index')
+@blueprint.route('/home')
 @login_required
 def index():
-  ownershiop = Ownership.query.filter_by(user_id=current_user.id).all()
-  properties = Properties.query.innerjoin(ownershiop)
-  return render_template('index.html', segment='index')
+  # dict = {valuations: ..., }
+  properties = Properties.query.filter_by(userId=current_user.id).all()
+  props = [p.propertyId for p in properties]
+  addresses = Address.query.filter(Address.property_id.in_(props)).all()
+  return render_template('home.html', addresses=addresses)
 
 
 # TODO its not reaching this route
 @blueprint.route('/properties-list', methods=['GET'])
 @login_required
 def properties():
-  owned_properties = Ownership.query.filter_by(user_id=current_user.id).all()
-  props = [op.property_id for op in owned_properties]
-  properties = Properties.query.filter(Properties.propertyId.in_(props)).all()
+  properties = Properties.query.filter_by(userId=current_user.id).\
+    join(Address).all()
 
+  # print('=============', file=sys.stderr)
+  # print(properties[0].__dict__, file=sys.stderr)
+  # print('=============', file=sys.stderr)
   return render_template('properties-list.html', properties=properties)
 
 

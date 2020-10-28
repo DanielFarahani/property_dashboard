@@ -34,6 +34,7 @@ class Properties(db.Model):
     # TODO change datetime type
     __tablename__ = 'Properties'
     propertyId = Column(Integer, primary_key=True)
+    userId = db.Column(Integer, db.ForeignKey('User.id'))
     bedrooms = Column(Integer)
     bathrooms = Column(Integer)
     carSpaces = Column(Integer)
@@ -45,6 +46,8 @@ class Properties(db.Model):
     valuation = Column(Integer)
     valuationDate = Column(String)
     yearBuilt = Column(String)
+
+    address = db.relationship("Address", back_populates="properties")
 
 
 # class PropertyFinancials(db.Model):
@@ -65,13 +68,8 @@ class Address(db.Model):
     suburb = Column(String)
     state = Column(String)
     postcode = Column(Integer)
-
-
-class Ownership(db.Model):
-    __tablename__ = 'Ownership'
-    id = Column(Integer, primary_key=True)
-    user_id = db.Column(Integer, db.ForeignKey('User.id'))
-    property_id = db.Column(Integer, db.ForeignKey('Properties.propertyId'))
+    
+    properties = db.relationship("Properties", back_populates="address")
 
 
 @login_manager.user_loader

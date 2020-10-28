@@ -104,7 +104,7 @@
 											<th>State</th>
 											<th>Beds</th>
 											<th>Baths</th>
-											<th>Car spaces</th>
+											<th>Car Spaces</th>
 											<th>Valuation</th>
 											<th>Remove</th>
 										</tr>
@@ -112,8 +112,8 @@
 									<tbody>
 										{% for prop in properties %}
 											<tr>
-												<td> {{ prop.address }} </td>
-												<td> {{ prop.state }} </td>
+												<td> {{ prop.address[0].street }} </td>
+												<td> {{ prop.address[0].state }} </td>
 												<td> {{ prop.bedrooms }} </td>
 												<td> {{ prop.bathrooms }} </td>
 												<td> {{ prop.carSpaces }} </td>
