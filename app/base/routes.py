@@ -4,7 +4,7 @@ from flask_login import (current_user, login_required, login_user, logout_user)
 from app import db, login_manager
 from app.base import blueprint
 from app.base.forms import LoginForm, CreateAccountForm
-from app.base.models import User
+from app.models import User
 from app.base.util import verify_pass
 
 
@@ -66,16 +66,6 @@ def register():
 
     # else we can create the user
     user = User(**request.form)
-    # TODO create try block for db committment
-    db.session.add(user)
-    db.session.commit()
-    # try:
-    #     db.session.add(user)
-    #     db.session.commit()
-    # except:
-    #     db.session.rollback()
-    # finally:
-    #     db.session.close()
 
     return render_template('accounts/register.html', 
                             msg='User created please <a href="/login">login</a>', 

@@ -34,7 +34,7 @@ class ProductionConfig(Config):
     )
 
 
-# Debug child
+# Debug child config
 class DebugConfig(Config):
     DEBUG = True
 
