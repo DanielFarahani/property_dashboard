@@ -62,7 +62,7 @@
 					<!-- TODO this doesn't bind to sidebar, just the route. Problem -->
 					{% for add in addresses%}
 						<li class="nav-item">
-							<a href="{{ add.description }}" aria-expanded="false">
+							<a href="{{ add.property_id }}" aria-expanded="false">
 								<i class="fas fa-map-marker-alt"></i>
 								<p> {{ add.street }}, {{ add.state }} </p>
 						</a>
