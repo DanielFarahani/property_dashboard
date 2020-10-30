@@ -19,8 +19,8 @@
 				<!-- New property form -->
 				<div class="modal fade" id="addAddressModal" tabindex="-1" role="dialog" aria-hidden="true">
 					<div class="modal-dialog" role="document">
-
 						<div class="modal-content">
+
 							<div class="modal-header no-bd">
 								<h5 class="modal-title">
 									<span class="fw-mediumbold">
@@ -34,22 +34,22 @@
 
 							<div class="modal-body">
 								<p class="small">Add a new property by entering the address</p>
-								<!-- new property form -->
 								<form method="POST" action="/add-property">
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="form-group form-group-default">
 												<label>Address</label>
-												<input id="addAddress" type="text"  class="form-control" placeholder="Enter a location"/>
+												<input id="addAddress" type="text" class="form-control" placeholder="Enter a location"/>
 											</div>
 										</div>
 									</div>
-								</form>
-							</div>
 
-							<div class="modal-footer no-bd">
-								<button type="button" id="addRowButton" class="btn btn-primary">Add</button>
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									<div class="modal-footer no-bd">
+										<button type="submit" id="addAddressButton" class="btn btn-primary">Add</button>
+										<button type="button" data-dismiss="modal" class="btn btn-danger" >Close</button>
+									</div>
+
+								</form>
 							</div>
 
 						</div>
@@ -173,8 +173,12 @@
 
 	<script>
 		function initMap() {
+			var options = {
+				componentRestrictions: {country: ["aus", "nz", "uk"]}
+			};
+
 			var input = document.getElementById('addAddress');
-			var autocomplete = new google.maps.places.Autocomplete(input);
+			var autocomplete = new google.maps.places.Autocomplete(input, options);
 			$('#addAddressModal').modal('hide');
 		}
 	</script>
@@ -182,6 +186,8 @@
 	<style>
     .pac-container {
         z-index: 10000 !important;
+				/* TODO add same styling to the pac-container as the dashboard */
     }
 	</style>
+
 {% endblock javascripts %}

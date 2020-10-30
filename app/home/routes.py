@@ -48,10 +48,14 @@ def add_properties():
   # store address info in address
   # return success notification
   # address = request.form.json()
-  address = request.json()
-  cl_search = search.Search()
-  res = cl.search.search_properties(address)
-  return redirect_url(url_for('home'))  
+
+  address = request.form.to_dict()
+  print('=============', file=sys.stderr)
+  print(address, file=sys.stderr)
+  print('=============', file=sys.stderr)
+  # cl_search = search.Search()
+  # res = cl.search.search_properties(address)
+  return redirect(url_for('home_blueprint.index'))  
 
 
 @blueprint.route('/<template>')
