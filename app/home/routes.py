@@ -27,7 +27,6 @@ def index():
   return render_template('home.html')
 
 
-# TODO its not reaching this route
 @blueprint.route('/properties-list', methods=['GET'])
 @login_required
 def properties():
@@ -48,7 +47,8 @@ def add_properties():
   # store property in properties
   # store address info in address
   # return success notification
-  address = requst.form.json()
+  # address = request.form.json()
+  address = request.json()
   cl_search = search.Search()
   res = cl.search.search_properties(address)
   return redirect_url(url_for('home'))  

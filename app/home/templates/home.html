@@ -10,14 +10,14 @@
 					<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
 				</div>
 				<div class="ml-md-auto py-2 py-md-0">
-					<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
+					<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addAddressModal">
 						<i class="fa fa-plus"></i>
 						Add Property
 					</button>
 				</div>
 
 				<!-- New property form -->
-				<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal fade" id="addAddressModal" tabindex="-1" role="dialog" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 
 						<div class="modal-content">
@@ -35,12 +35,12 @@
 							<div class="modal-body">
 								<p class="small">Add a new property by entering the address</p>
 								<!-- new property form -->
-								<form method="POST" action="">
+								<form method="POST" action="/add-property">
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="form-group form-group-default">
 												<label>Address</label>
-												<input id="addAddress" type="text"  class="form-control" placeholder="Enter a location" />
+												<input id="addAddress" type="text"  class="form-control" placeholder="Enter a location"/>
 											</div>
 										</div>
 									</div>
@@ -170,89 +170,18 @@
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="/static/assets/js/setting-demo.js"></script>
 	<script src="/static/assets/js/demo.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA_ogQ9dqwxiWZTead0L4Ga1wawqFG72zM"></script>
-	<script type="text/javascript">
-		google.maps.event.addDomListener(window, 'load', function () {
-		var places = new google.maps.places.Autocomplete(document.getElementById('addAddress'));
-	</script>
 
 	<script>
-		Circles.create({
-			id:'circles-1',
-			radius:45,
-			value:60,
-			maxValue:100,
-			width:7,
-			text: 5,
-			colors:['#f1f1f1', '#FF9E27'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-2',
-			radius:45,
-			value:70,
-			maxValue:100,
-			width:7,
-			text: 36,
-			colors:['#f1f1f1', '#2BB930'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-3',
-			radius:45,
-			value:40,
-			maxValue:100,
-			width:7,
-			text: 12,
-			colors:['#f1f1f1', '#F25961'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
-			type: 'line',
-			height: '70',
-			width: '100%',
-			lineWidth: '2',
-			lineColor: '#ffa534',
-			fillColor: 'rgba(255, 165, 52, .14)'
-		});
+		function initMap() {
+			var input = document.getElementById('addAddress');
+			var autocomplete = new google.maps.places.Autocomplete(input);
+			$('#addAddressModal').modal('hide');
+		}
 	</script>
-
-	<script>
-		$(document).ready(function() {
-			// Add property/address
-			$('#add-row').DataTable({
-				"pageLength": 5,
-			});
-
-			var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
-
-			$('#addRowButton').click(function() {
-				$('#add-row').dataTable().fnAddData([
-					$("#addName").val(),
-					$("#addPosition").val(),
-					$("#addOffice").val(),
-					action
-					]);
-				$('#addRowModal').modal('hide');
-
-			});
-		});
-	</script>
-
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ogQ9dqwxiWZTead0L4Ga1wawqFG72zM&libraries=places&callback=initMap" async defer></script>
+	<style>
+    .pac-container {
+        z-index: 10000 !important;
+    }
+	</style>
 {% endblock javascripts %}
