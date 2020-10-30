@@ -22,7 +22,8 @@ def inject_user():
 @blueprint.route('/home')
 @login_required
 def index():
-  # dict = {valuations: ..., }
+  # sum valuations, incomes, costs, properties
+  # send parcel to template
   return render_template('home.html')
 
 
