@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 import sys
 from app.home import blueprint
-from flask import render_template, redirect, url_for, request
+from flask import render_template, redirect, url_for, request, g
 from flask_login import login_required, current_user
 from app import login_manager, db
 from jinja2 import TemplateNotFound
@@ -11,14 +11,19 @@ from app.models import User, Properties, Address
 sys.path.append("/Users/df/other/corelogic_pyclient")
 from corelogic.property import (suggest, search, valuations)
 
+@blueprint.context_processor
+def inject_user():
+  properties = Properties.query.filter_by(userId=current_user.id).all()
+  props = [p.propertyId for p in properties]
+  addresses = Address.query.filter(Address.property_id.in_(props)).all()
+  return dict(addresses=addresses)
+
+
 @blueprint.route('/home')
 @login_required
 def index():
   # dict = {valuations: ..., }
-  properties = Properties.query.filter_by(userId=current_user.id).all()
-  props = [p.propertyId for p in properties]
-  addresses = Address.query.filter(Address.property_id.in_(props)).all()
-  return render_template('home.html', addresses=addresses)
+  return render_template('home.html')
 
 
 # TODO its not reaching this route
@@ -34,13 +39,18 @@ def properties():
   return render_template('properties-list.html', properties=properties)
 
 
-# @blueprint.route('/add-property', methods=['POST'])
-# @login_required
-# def add_properties():
-#   address = requst.form.json()
-#   cl_search = search.Search(address)
-#   res = cl.search.search_properties(address)
-#   return redirect_url(properties)  
+@blueprint.route('/add-property', methods=['POST'])
+@login_required
+def add_properties():
+  # get address
+  # get property info from Cl
+  # store property in properties
+  # store address info in address
+  # return success notification
+  address = requst.form.json()
+  cl_search = search.Search()
+  res = cl.search.search_properties(address)
+  return redirect_url(url_for('home'))  
 
 
 @blueprint.route('/<template>')

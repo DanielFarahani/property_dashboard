@@ -32,11 +32,10 @@ def login():
     # Something (user or pass) is not ok
     return render_template( 'accounts/login.html', msg='Wrong user or password', form=login_form)
 
-  # NOTE not sure what this does
   if not current_user.is_authenticated:
     return render_template('accounts/login.html', form=login_form)
 
-  return redirect(url_for('home_blueprint.index'))
+  return redirect(url_for('home_blueprint.home'))
     
 
 ## Register user

@@ -53,26 +53,20 @@
 					
 					<!-- Individual property -->
 					<li class="nav-section">
-						<span class="sidebar-mini-icon">
-							<i class="fa fa-ellipsis-h"></i>
-						</span>
 						<h4 class="card-header">My Properties</h4>
 					</li>
-					
-					<!-- TODO this doesn't bind to sidebar, just the route. Problem -->
+
 					{% for add in addresses%}
 						<li class="nav-item">
 							<a href="{{ add.property_id }}" aria-expanded="false">
 								<i class="fas fa-map-marker-alt"></i>
 								<p> {{ add.street }}, {{ add.state }} </p>
-						</a>
+							</a>
+						</li>
 					{% endfor %}
 					
 					<!-- Side bar items -->
 					<li class="nav-section">
-						<span class="sidebar-mini-icon">
-							<i class="fa fa-ellipsis-h"></i>
-						</span>
 						<h4 class="card-header">Components</h4>
 					</li>
 
