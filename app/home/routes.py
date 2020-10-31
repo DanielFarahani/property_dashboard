@@ -11,6 +11,8 @@ from app.models import User, Properties, Address
 sys.path.append("/Users/df/other/corelogic_pyclient")
 from corelogic.property import (suggest, search, valuations)
 
+
+# add data to global context for all templates
 @blueprint.context_processor
 def inject_user():
   properties = Properties.query.filter_by(userId=current_user.id).all()
@@ -39,22 +41,33 @@ def properties():
   return render_template('properties-list.html', properties=properties)
 
 
+@blueprint.route('/property/<int:pid>', methods=['GET'])
+@login_required
+def property_view(pid):
+  prop = Properties.query.filter_by(propertyId=pid).\
+    join(Address).all()
+  # print('=============', file=sys.stderr)
+  # print(prop[0].address[0].street, file=sys.stderr)
+  # print('=============', file=sys.stderr)
+  return render_template('property.html', property=prop)
+
+
 @blueprint.route('/add-property', methods=['POST'])
 @login_required
 def add_properties():
   # get address
-  # get property info from Cl
-  # store property in properties
-  # store address info in address
-  # return success notification
-  # address = request.form.json()
-
   address = request.form.to_dict()
   print('=============', file=sys.stderr)
   print(address, file=sys.stderr)
   print('=============', file=sys.stderr)
+  # get property info from Cl
   # cl_search = search.Search()
   # res = cl.search.search_properties(address)
+  
+  # store property in properties
+  # store address info in address
+  # return success notification
+  # address = request.form.json()
   return redirect(url_for('home_blueprint.index'))  
 
 
