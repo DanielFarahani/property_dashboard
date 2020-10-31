@@ -33,9 +33,24 @@
 				<div class="col-md-12">
 					<div class="card">
 						<div class="card-header">
-							<div class="card-title"> {{ property[0].address[0].description }} </div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="card-title"> 
+										{{ property[0].address[0].description }} 
+									</div>
+								</div>
+								<div class="col-md-4">
+									<i class="fa fa-bed"></i>
+									{{ property[0].bedrooms }} 
+									<i class="fa fa-bath"></i>
+									{{ property[0].bathrooms }} 
+									<i class="fa fa-car-alt"></i>
+									{{ property[0].carSpaces }} 
+								</div>
+							</div>
 							<div class="text-warning"> Edit data that is not correct. </div>
 						</div>
+
 						<div class="card-body">
 							<div class="row">
 								<div class="col-md-6 col-lg-4">
@@ -112,6 +127,50 @@
 					</div>
 				</div>
 				
+				<div class="pt-lg-2">
+					<div class="container text-white pt-lg-2">
+						<nav class="navbar navbar-tab nvabar-header-left navbar-expand-lg p-0">
+							<ul class="navbar-nav page-navigation">
+								<h3 class="title-menu bg-primary d-flex d-lg-none"> 
+									Menu 
+									<div class="close-menu"> <i class="flaticon-cross"></i></div>
+								</h3>
+								<li class="nav-item active">
+									<a class="nav-link" href="/property" role="button" aria-haspopup="true" aria-expanded="false">
+										Information
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/property/files" role="button" aria-haspopup="true" aria-expanded="false">
+										Documents
+									</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+										Projects
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+										Pages
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="main-panel">
+					<div class="container">
+						<div class="page-inner page-inner-tab-style">
+							<div class="card">
+								<div class="page-header">
+									<h4 class="page-title">TEST</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
 			</div>
