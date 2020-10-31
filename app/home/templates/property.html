@@ -1,6 +1,5 @@
 {% extends "layouts/base.html" %}
-{% block title %} Property {% endblock %} 
-<!-- Specific Page CSS goes HERE  -->
+{% block title %} Property Details {% endblock %} 
 {% block stylesheets %}{% endblock stylesheets %}
 {% block content %}
 
@@ -85,6 +84,17 @@
 											</div>
 										</div>
 									</div>
+									<div class="form-group">
+										<label>Input Date Picker</label>
+										<div class="input-group">
+											<input type="text" class="form-control" id="datepicker" name="datepicker">
+											<div class="input-group-append">
+												<span class="input-group-text">
+													<i class="fa fa-calendar-check"></i>
+												</span>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="col-md-6 col-lg-4">
 									<div class="form-group">
@@ -101,32 +111,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header">
-							<div class="card-title"> {{ property[0].address[0].description }} </div>
-							<div class="text-warning"> Edit data that is not correct. </div>
-						</div>
-						<div class="card-body">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Input Date Picker</label>
-										<div class="input-group">
-											<input type="text" class="form-control" id="datepicker" name="datepicker">
-											<div class="input-group-append">
-												<span class="input-group-text">
-													<i class="fa fa-calendar-check"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
+				<!-- NAV bar code -->
 				<div class="pt-lg-2">
 					<div class="container text-white pt-lg-2">
 						<nav class="navbar navbar-tab nvabar-header-left navbar-expand-lg p-0">
@@ -146,12 +131,12 @@
 									</a>
 								</li>
 								<li class="nav-item dropdown">
-									<a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+									<a class="nav-link" href="/" role="button" aria-haspopup="true" aria-expanded="false">
 										Projects
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+									<a class="nav-link" href="/" role="button" aria-haspopup="true" aria-expanded="false">
 										Pages
 									</a>
 								</li>
@@ -159,13 +144,19 @@
 						</nav>
 					</div>
 				</div>
-
 				<div class="main-panel">
 					<div class="container">
 						<div class="page-inner page-inner-tab-style">
 							<div class="card">
-								<div class="page-header">
-									<h4 class="page-title">TEST</h4>
+								<div class="card-header">
+									<div class="page-header">
+										<h4 class="page-title">HEADER</h4>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="page-body">
+										<h3>BODY</h3>
+									</div>
 								</div>
 							</div>
 						</div>
