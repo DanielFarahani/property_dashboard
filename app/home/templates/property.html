@@ -125,14 +125,16 @@
 										<div class="col-md-6 col-lg-4">				
 											<div class="form-group">
 												<label>Date purchased</label>
+
 												<div class="input-group">
 													<input type="text" class="form-control" id="datepicker" name="datepicker">
 													<div class="input-group-append">
 														<span class="input-group-text">
-															<i class="fa fa-calendar-check"></i>
+															<i class="fa fa-calendar-alt"></i>
 														</span>
 													</div>
 												</div>
+												
 											</div>
 										</div>
 
@@ -277,7 +279,7 @@
 {% endblock content %}
 {% block javascripts %}
 	<script src="/static/assets/js/setting-demo.js"></script>
-	<script src="/static/assets/js/datepicker.js"></script>
+	<script src="/static/assets/js/bootstrap-datepicker.min.js"></script>
 	<script>
 		$('#datepicker').datetimepicker({
 			format: 'MM/DD/YYYY',
