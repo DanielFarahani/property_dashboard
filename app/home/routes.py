@@ -14,19 +14,23 @@ from corelogic.property import (suggest, search, valuations)
 
 # add data to global context for all templates
 @blueprint.context_processor
-def inject_user():
+def inject_property_profile():
   properties = Properties.query.filter_by(userId=current_user.id).all()
   props = [p.propertyId for p in properties]
   addresses = Address.query.filter(Address.property_id.in_(props)).all()
-  return dict(addresses=addresses)
+  return dict(addresses=addresses, properties=properties)
 
 
 @blueprint.route('/home')
 @login_required
 def index():
-  # sum valuations, incomes, costs, properties
-  # send parcel to template
-  return render_template('home.html')
+  overview = dict()
+  properties = inject_property_profile()['properties']
+
+  overview['count'] = len(properties)
+  # TODO sum valuations, incomes, costs (maybe in db)
+
+  return render_template('home.html', summary=overview)
 
 
 @blueprint.route('/properties-list', methods=['GET'])
