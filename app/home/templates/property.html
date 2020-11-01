@@ -28,6 +28,7 @@
 				</ul>
 			</div>
 
+			
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item">
 					<a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">Information</a>
@@ -39,13 +40,12 @@
 					<a class="nav-link" id="documents-tab" data-toggle="tab" href="#documents" role="tab" aria-controls="documents" aria-selected="false">Documents</a>
 				</li>
 			</ul>
-			
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
 						<div class="card-header">
 							<div class="row">
-								<div class="col-md-3">
+								<div class="col-md-4">
 									<div class="card-title"> 
 										{{ property[0].address[0].description }} 
 									</div>
@@ -58,149 +58,157 @@
 									<i class="fa fa-car-alt"></i>
 									{{ property[0].carSpaces }}
 									<i class="fas fa-ruler-combined"></i>
-									{{ property[0].landAreaM2 }} 
-									({{ property[0].floorAreaM2 }}) m^2
+									{{ property[0].landAreaM2 }} m^2
+									<!-- ({{ property[0].floorAreaM2 }}) m^2 -->
 								</div>
 							</div>
-							<div class="text-warning"> Edit data that is not correct. </div>
-						</div>
-
-						<div class="card-body tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
-							<div class="row">
-								<!-- LEFT column -->
-								<div class="col-md-6 col-lg-4">
-									<div class="form-group">
-										<label for="largeInput"> Property price </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="largeInput"> Stamp Duty (per year) </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-									
-									<div class="form-group">
-										<label for="largeInput"> Land Rate (per year) </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="largeInput"> Agency fee (% of rent) </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- MIDDLE column -->
-								<div class="col-md-6 col-lg-4">				
-									<div class="form-group">
-										<label>Date purchased</label>
-										<div class="input-group">
-											<input type="text" class="form-control" id="datepicker" name="datepicker">
-											<div class="input-group-append">
-												<span class="input-group-text">
-													<i class="fa fa-calendar-check"></i>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- RIGHT column -->
-								<div class="col-md-6 col-lg-4">
-									<div class="form-group">
-										<label for="largeInput"> Rent (per week) </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="largeInput"> Water (per year) </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="largeInput"> Electricity (per year) </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="largeInput"> Gas (per year) </label>
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-											<div class="input-group-append">
-											</div>
-										</div>
-									</div>
-
-								</div>
+							<div class="text-warning"> 
+								Data has been filled based on our database, edit as necessary. 
 							</div>
 						</div>
 
-						<!-- LOAN tab body -->
-						<div class="card-body tab-pane fade" id="loan" role="tabpanel" aria-labelledby="loan-tab">
-							<div class="form-group">
-								<label for="exampleFormControlFile1">Example file input</label>
-								<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					<div class="card-body">
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
+								<div class="row">
+									<!-- LEFT column -->
+									<div class="col-md-6 col-lg-4">
+										<div class="form-group">
+											<label for="largeInput"> Property price </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="largeInput"> Stamp Duty (per year) </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label for="largeInput"> Land Rate (per year) </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="largeInput"> Agency fee (% of rent) </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- MIDDLE column -->
+									<div class="col-md-6 col-lg-4">				
+										<div class="form-group">
+											<label>Date purchased</label>
+											<div class="input-group">
+												<input type="text" class="form-control" id="datepicker" name="datepicker">
+												<div class="input-group-append">
+													<span class="input-group-text">
+														<i class="fa fa-calendar-check"></i>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- RIGHT column -->
+									<div class="col-md-6 col-lg-4">
+										<div class="form-group">
+											<label for="largeInput"> Rent (per week) </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="largeInput"> Water (per year) </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="largeInput"> Electricity (per year) </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="largeInput"> Gas (per year) </label>
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+												<div class="input-group-append">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
-						
-						<!-- DOCUMENT tab body -->
-						<div class="card-body tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
-							<div class="form-group">
-								<label for="exampleFormControlFile1">Example file input</label>
-								<input type="file" class="form-control-file" id="exampleFormControlFile1">
+
+							<!-- LOAN tab body -->
+							
+								<div class="tab-pane fade" id="loan" role="tabpanel" aria-labelledby="loan-tab">
+									<div class="form-group">
+										<label for="exampleFormControlFile1">Example file input</label>
+										<input type="file" class="form-control-file" id="exampleFormControlFile1">
+									</div>
+								</div>
+								
+								<!-- DOCUMENT tab body -->
+								<div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+									<div class="form-group">
+										<label for="exampleFormControlFile1">Example file input</label>
+										<input type="file" class="form-control-file" id="exampleFormControlFile1">
+									</div>
+								</div>
 							</div>
+
 						</div>
+					</div>
 
 						<!-- card FOOTER -->
 						<div class="card-action">
@@ -212,11 +220,11 @@
 			</div>
 
 			<!-- NAV bar code -->
-			<div class="tab-content" id="myTabContent">
+			<!-- <div class="tab-content" id="myTabContent"> -->
 				<!-- <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">TESTING HOME</div> -->
 				<!-- <div class="tab-pane fade" id="loan" role="tabpanel" aria-labelledby="loan-tab">TESTING PROFILE</div> -->
-				<div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">TETING CONTACT </div>
-			</div>
+				<!-- <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">TETING CONTACT </div> -->
+			<!-- </div> -->
 
 		</div>
 	</div>
