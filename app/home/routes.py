@@ -9,7 +9,7 @@ from app.models import User, Properties, Address
 
 # localy importing corelogic wrapper remove in production
 sys.path.append("/Users/df/other/corelogic_pyclient")
-from corelogic.property import (suggest, search, valuations)
+from corelogic.property import (suggest, search, valuations, details)
 
 
 # add data to global context for all templates
@@ -59,19 +59,29 @@ def property_view(pid):
 @blueprint.route('/add-property', methods=['POST'])
 @login_required
 def add_properties():
-  # get address
+  ## get address
   address = request.form.get('address')
-  print('=============', file=sys.stderr)
-  print("form data: ", address, file=sys.stderr)
-  print('=============', file=sys.stderr)
-  # get property info from Cl
-  cl_search = search.Search()
-  # res = cl.search.search_properties(address)
+  address = ' '.join(address.replace(',', '').split()[:-1])
+
+  ## get property info from Cl
+  # cl_search = search.Search()
+  # dets = cl_search.address_search(address)
+  # pid = dets['propertyAddress'][0]['propertyId']
+
+  ## get property details
+  # cl_details = details.Details()
+  # details = cl_details.property_attributes(pid)
+
+  ## store property in properties
+  # new_property = Properties(propertyId=pid, userId=current_user.id, bedrooms=details.get('bedrooms',0),
+  #   bathrooms=details.get('bathrooms',0), carSpaces=details.get('carSpaces',0), floorAreaM2=details.get('floorArea',0),
+  #   landAreaM2=details.get('landArea',0), propertyType=details.get('propertyType',0), saleDate="", salePrice="",
+  #   valuation=0, valuationDate="", yearBuilt=details.get('yearBuilt',0))
   
-  # store property in properties
-  # store address info in address
-  # return success notification
-  # address = request.form.json()
+  ## store address info in address
+
+  ## return success notification
+  
   return redirect(url_for('home_blueprint.index'))  
 
 
