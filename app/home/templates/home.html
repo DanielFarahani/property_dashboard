@@ -1,6 +1,13 @@
 {% extends "layouts/base.html" %}
 {% block title %} Dashboard {% endblock %} 
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+	<style>
+		.pac-container {
+				z-index: 10000 !important;
+				/* TODO add same styling to the pac-container as the dashboard */
+		}
+	</style>
+{% endblock stylesheets %}
 {% block content %}
 <div class="content">
 	<div class="panel-header bg-primary-gradient">
@@ -20,21 +27,19 @@
 				<div class="modal fade" id="addAddressModal" tabindex="-1" role="dialog" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
-
+							<!-- HEADER -->
 							<div class="modal-header no-bd">
 								<h5 class="modal-title">
-									<span class="fw-mediumbold">
-										New Property
-									</span> 
+									<span class="fw-mediumbold"> New Property</span> 
 								</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-
+							<!-- BODY -->
 							<div class="modal-body">
-								<p class="small">Add a new property by entering the address</p>
-								<form method="POST" action="/add-property">
+								<form id="addAddressForm" method="POST" action="/add-property">
+									<p class="small">Add a new property by entering the address.</p>
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="form-group form-group-default">
@@ -43,20 +48,17 @@
 											</div>
 										</div>
 									</div>
-
+									<!-- FOOTER -->
 									<div class="modal-footer no-bd">
 										<button type="submit" id="addAddressButton" class="btn btn-primary">Add</button>
-										<button type="button" data-dismiss="modal" class="btn btn-danger" >Close</button>
+										<button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
 									</div>
-
 								</form>
 							</div>
 						</div>
-						
 					</div>
 				</div>
 				<!-- END new property form -->
-
 			</div>
 		</div>
 	</div>
@@ -170,6 +172,7 @@
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="/static/assets/js/setting-demo.js"></script>
 	<script src="/static/assets/js/demo.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ogQ9dqwxiWZTead0L4Ga1wawqFG72zM&libraries=places&callback=initMap" async defer></script>
 
 	<script>
 		function initMap() {
@@ -182,12 +185,13 @@
 			$('#addAddressModal').modal('hide');
 		}
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ogQ9dqwxiWZTead0L4Ga1wawqFG72zM&libraries=places&callback=initMap" async defer></script>
-	<style>
-    .pac-container {
-        z-index: 10000 !important;
-				/* TODO add same styling to the pac-container as the dashboard */
-    }
-	</style>
+	
+	<script>
+		$('#submit').click(function(){
+			/* when the submit button in the modal is clicked, submit the form */
+			alert('submitting');
+    	$('#addPropertyForm').submit();
+		});	
+	</script>
 
 {% endblock javascripts %}
