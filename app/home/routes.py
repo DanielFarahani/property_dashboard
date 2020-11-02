@@ -60,12 +60,12 @@ def property_view(pid):
 @login_required
 def add_properties():
   # get address
-  address = request.form.to_dict()
+  address = request.form.get('address')
   print('=============', file=sys.stderr)
-  print(address, file=sys.stderr)
+  print("form data: ", address, file=sys.stderr)
   print('=============', file=sys.stderr)
   # get property info from Cl
-  # cl_search = search.Search()
+  cl_search = search.Search()
   # res = cl.search.search_properties(address)
   
   # store property in properties

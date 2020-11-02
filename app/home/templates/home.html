@@ -44,7 +44,7 @@
 										<div class="col-sm-12">
 											<div class="form-group form-group-default">
 												<label>Address</label>
-												<input id="addAddress" type="text" class="form-control" placeholder="Enter a location"/>
+												<input id="addAddress" name="address" type="text" class="form-control" placeholder="Enter a location"/>
 											</div>
 										</div>
 									</div>
@@ -184,14 +184,6 @@
 			var autocomplete = new google.maps.places.Autocomplete(input, options);
 			$('#addAddressModal').modal('hide');
 		}
-	</script>
-	
-	<script>
-		$('#submit').click(function(){
-			/* when the submit button in the modal is clicked, submit the form */
-			alert('submitting');
-    	$('#addPropertyForm').submit();
-		});	
 	</script>
 
 {% endblock javascripts %}

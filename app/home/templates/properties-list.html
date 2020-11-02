@@ -41,41 +41,42 @@
 						
 						<div class="card-body">
 							<!-- New property form -->
-							<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+							<!-- TODO make this in to a component/jinja block -->
+							<div class="modal fade" id="addAddressModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content">
+										<!-- HEADER -->
 										<div class="modal-header no-bd">
 											<h5 class="modal-title">
-												<span class="fw-mediumbold">
-													New Property
-												</span> 
+												<span class="fw-mediumbold"> New Property</span> 
 											</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
+										<!-- BODY -->
 										<div class="modal-body">
-											<p class="small">Add a new property by entering the address</p>
-											<!-- Form -->
-											<form method="POST" action="/add-property">
+											<form id="addAddressForm" method="POST" action="/add-property">
+												<p class="small">Add a new property by entering the address.</p>
 												<div class="row">
 													<div class="col-sm-12">
 														<div class="form-group form-group-default">
 															<label>Address</label>
-															<input id="addAddress" type="text" class="form-control" placeholder="Enter Address">
-															<!-- <input id="addPosition" type="text" class="form-control" placeholder="fill position"> -->
+															<input id="addAddress" name="address" type="text" class="form-control" placeholder="Enter a location"/>
 														</div>
 													</div>
 												</div>
+												<!-- FOOTER -->
 												<div class="modal-footer no-bd">
-													<button type="button" id="addRowButton" class="btn btn-primary">Add</button>
-													<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+													<button type="submit" id="addAddressButton" class="btn btn-primary">Add</button>
+													<button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
 												</div>
 											</form>
 										</div>
 									</div>
 								</div>
 							</div>
+							<!-- END new property form -->
 
 	
 							<!-- Table content -->
