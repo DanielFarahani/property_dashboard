@@ -79,15 +79,7 @@ def add_properties():
       bathrooms=prop_detail.get('bathrooms',0), carSpaces=prop_detail.get('carSpaces',0), floorAreaM2=prop_detail.get('floorArea',0),
       landAreaM2=prop_detail.get('landArea',0), propertyType=prop_detail.get('propertyType',0), saleDate="", salePrice="",
       valuation=0, valuationDate="", yearBuilt=prop_detail.get('yearBuilt',0))
-    db.session.add(new_property)
-    db.session.commit()
-  except Exception as e:
-    db.session.rollback()
-  finally:
-    db.session.close()
-
-  ## store address info in address
-  try:
+    
     full_add = dets['suggestions'][0]['suggestion']
     pc = full_add.split().pop(-1)
     sta = full_add.split().pop(-1)
@@ -95,15 +87,18 @@ def add_properties():
     st = full_add.split().pop(-1)
 
     new_address = Address(propertyId=pid, description=full_add, street=st, suburb=sub, state=sta, postcode=pc)
+    
     db.session.add(new_address)
+    db.session.add(new_property)
     db.session.commit()
+    flash("Property added successfuly, check the link to edit its information")
   except Exception as e:
     db.session.rollback()
+    flash("Address failed.")
   finally:
     db.session.close()
 
   ## return success notification
-  flash("Address added successfuly, check the link to edit its information")
 
   return redirect(url_for('home_blueprint.index'))  
 
