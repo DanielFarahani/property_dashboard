@@ -73,23 +73,24 @@ def add_properties():
   prop_detail = cl_details.property_attributes(pid)
 
 
-  ## store property in properties
+  ## store property and address
   try:
     new_property = Properties(propertyId=pid, userId=current_user.id, bedrooms=prop_detail.get('bedrooms',0),
       bathrooms=prop_detail.get('bathrooms',0), carSpaces=prop_detail.get('carSpaces',0), floorAreaM2=prop_detail.get('floorArea',0),
-      landAreaM2=prop_detail.get('landArea',0), propertyType=prop_detail.get('propertyType',0), saleDate="", salePrice="",
+      landAreaM2=prop_detail.get('landArea',0), propertyType=prop_detail.get('propertyType',0), saleDate="", salePrice=0,
       valuation=0, valuationDate="", yearBuilt=prop_detail.get('yearBuilt',0))
     
     full_add = dets['suggestions'][0]['suggestion']
-    pc = full_add.split().pop(-1)
-    sta = full_add.split().pop(-1)
-    sub = full_add.split().pop(-1)
-    st = full_add.split().pop(-1)
+    components = full_add.split()
+    pc = components.pop(-1)
+    sta = components.pop(-1)
+    sub = components.pop(-1)
+    st = components.pop(-1)
 
     new_address = Address(propertyId=pid, description=full_add, street=st, suburb=sub, state=sta, postcode=pc)
     
-    db.session.add(new_address)
     db.session.add(new_property)
+    db.session.add(new_address)
     db.session.commit()
     flash("Property added successfuly, check the link to edit its information")
   except Exception as e:
@@ -97,8 +98,6 @@ def add_properties():
     flash("Address failed.")
   finally:
     db.session.close()
-
-  ## return success notification
 
   return redirect(url_for('home_blueprint.index'))  
 
