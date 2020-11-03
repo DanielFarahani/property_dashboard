@@ -108,6 +108,21 @@ def add_properties():
   return redirect(url_for('home_blueprint.index'))  
 
 
+# @blueprint.route('/remove-property/<int:pid>', methods=['GET'])
+# @login_required
+# def add_properties(pid):
+#   try:
+#     prop = Properties.query.get(pid)
+#     db.session.delete(prop)
+#     db.session.commit()
+#     flash('Property removed!') 
+#   except Exception as e:
+#     db.session.rollback()
+#     flash('Failed to delete!')
+#   finally:
+#     db.session.close()
+
+
 @blueprint.route('/<template>')
 @login_required
 def route_template(template):
