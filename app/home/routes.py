@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 import sys
 from app.home import blueprint
-from flask import render_template, redirect, url_for, request, g
+from flask import render_template, redirect, url_for, request, flash
 from flask_login import login_required, current_user
 from app import login_manager, db
 from jinja2 import TemplateNotFound
@@ -70,21 +70,40 @@ def add_properties():
 
   ## get property details
   cl_details = details.Details()
-  details = cl_details.property_attributes(pid)
+  prop_detail = cl_details.property_attributes(pid)
 
-  print('=============', file=sys.stderr)
-  print(details, file=sys.stderr)
-  print('=============', file=sys.stderr)
 
   ## store property in properties
-  # new_property = Properties(propertyId=pid, userId=current_user.id, bedrooms=details.get('bedrooms',0),
-  #   bathrooms=details.get('bathrooms',0), carSpaces=details.get('carSpaces',0), floorAreaM2=details.get('floorArea',0),
-  #   landAreaM2=details.get('landArea',0), propertyType=details.get('propertyType',0), saleDate="", salePrice="",
-  #   valuation=0, valuationDate="", yearBuilt=details.get('yearBuilt',0))
-  
+  try:
+    new_property = Properties(propertyId=pid, userId=current_user.id, bedrooms=prop_detail.get('bedrooms',0),
+      bathrooms=prop_detail.get('bathrooms',0), carSpaces=prop_detail.get('carSpaces',0), floorAreaM2=prop_detail.get('floorArea',0),
+      landAreaM2=prop_detail.get('landArea',0), propertyType=prop_detail.get('propertyType',0), saleDate="", salePrice="",
+      valuation=0, valuationDate="", yearBuilt=prop_detail.get('yearBuilt',0))
+    db.session.add(new_property)
+    db.session.commit()
+  except Exception as e:
+    db.session.rollback()
+  finally:
+    db.session.close()
+
   ## store address info in address
+  try:
+    full_add = dets['suggestions'][0]['suggestion']
+    pc = full_add.split().pop(-1)
+    sta = full_add.split().pop(-1)
+    sub = full_add.split().pop(-1)
+    st = full_add.split().pop(-1)
+
+    new_address = Address(propertyId=pid, description=full_add, street=st, suburb=sub, state=sta, postcode=pc)
+    db.session.add(new_address)
+    db.session.commit()
+  except Exception as e:
+    db.session.rollback()
+  finally:
+    db.session.close()
 
   ## return success notification
+  flash("Address added successfuly, check the link to edit its information")
 
   return redirect(url_for('home_blueprint.index'))  
 
