@@ -64,13 +64,17 @@ def add_properties():
   address = ' '.join(address.replace(',', '').split()[:-1])
 
   ## get property info from Cl
-  # cl_search = search.Search()
-  # dets = cl_search.address_search(address)
-  # pid = dets['propertyAddress'][0]['propertyId']
+  cl_sugg = suggest.Suggest()
+  dets = cl_sugg.suggest_properties(address, parcel=False)
+  pid = dets['suggestions'][0]['propertyId']
 
   ## get property details
-  # cl_details = details.Details()
-  # details = cl_details.property_attributes(pid)
+  cl_details = details.Details()
+  details = cl_details.property_attributes(pid)
+
+  print('=============', file=sys.stderr)
+  print(details, file=sys.stderr)
+  print('=============', file=sys.stderr)
 
   ## store property in properties
   # new_property = Properties(propertyId=pid, userId=current_user.id, bedrooms=details.get('bedrooms',0),
@@ -81,7 +85,7 @@ def add_properties():
   ## store address info in address
 
   ## return success notification
-  
+
   return redirect(url_for('home_blueprint.index'))  
 
 

@@ -32,7 +32,7 @@
 						<div class="card-header">
 							<div class="d-flex align-items-center">
 								<h4 class="card-title">Property List</h4>
-								<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
+								<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addAddressModal">
 									<i class="fa fa-plus"></i>
 									Add Property
 								</button>
@@ -142,6 +142,8 @@
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="/static/assets/js/setting-demo.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ogQ9dqwxiWZTead0L4Ga1wawqFG72zM&libraries=places&callback=initMap" async defer></script>
+
 	<script >
 		$(document).ready(function() {
 			$('#basic-datatables').DataTable({
@@ -173,14 +175,22 @@
 
 		</script>
 
+		
+
 		<script>
 			function initMap() {
+				var options = {
+					componentRestrictions: {country: ["aus", "nz", "uk"]}
+				};
+
 				var input = document.getElementById('addAddress');
-				var autocomplete = new google.maps.places.Autocomplete(input);
+				var autocomplete = new google.maps.places.Autocomplete(input, options);
+				autocomplete.setFields(["address_component"]);
+				
 				$('#addAddressModal').modal('hide');
 			}
 		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ogQ9dqwxiWZTead0L4Ga1wawqFG72zM&libraries=places&callback=initMap" async defer></script>
+		
 		<style>
 			.pac-container {
 					z-index: 10000 !important;
