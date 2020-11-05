@@ -92,10 +92,9 @@ def add_properties():
     db.session.add(new_property)
     db.session.add(new_address)
     db.session.commit()
-    flash("Property added successfuly, check the link to edit its information")
+
   except Exception as e:
     db.session.rollback()
-    flash("Address failed.")
   finally:
     db.session.close()
 
@@ -115,6 +114,9 @@ def add_properties():
 #     flash('Failed to delete!')
 #   finally:
 #     db.session.close()
+# https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=crud-data-table-for-database-with-modal-form
+# https://coderwall.com/p/ijrrpa/flask-flash-messages-as-bootstrap-alert
+# https://stackoverflow.com/questions/30106114/flask-bootstrap-combining-flash-message-in-one-block
 
 
 @blueprint.route('/<template>')
