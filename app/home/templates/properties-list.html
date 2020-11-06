@@ -118,11 +118,13 @@
 												<td> {{ prop.carSpaces }} </td>
 												<td> {{ prop.valuation }} </td>
 												<td>
-													<div class="form-button-action">
-														<button type="button" class="btn btn-link btn-danger" data-toggle="modal" data-target="#confirmDelete">
-															<i class="fas fa-trash-alt"></i>
-														</button>
-													</div>
+													<form method="GET" action="/remove-property/{{prop.propertyId}}">
+														<div class="form-button-action">
+															<button type="submit" class="btn btn-link btn-danger" data-toggle="modal" data-target="#confirmDelete">
+																<i class="fas fa-trash-alt"></i>
+															</button>
+														</div>
+													</form>
 												</td>
 											</tr>
 										{% endfor %}

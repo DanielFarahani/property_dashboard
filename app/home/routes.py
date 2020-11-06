@@ -101,19 +101,18 @@ def add_properties():
   return redirect(url_for('home_blueprint.index'))  
 
 
-# @blueprint.route('/remove-property/<int:pid>', methods=['GET'])
-# @login_required
-# def add_properties(pid):
-#   try:
-#     prop = Properties.query.get(pid)
-#     db.session.delete(prop)
-#     db.session.commit()
-#     flash('Property removed!') 
-#   except Exception as e:
-#     db.session.rollback()
-#     flash('Failed to delete!')
-#   finally:
-#     db.session.close()
+@blueprint.route('/remove-property/<int:pid>', methods=['GET'])
+@login_required
+def remove_properties(pid):
+  # try:
+  #   prop = Properties.query.get(pid)
+  #   db.session.delete(prop)
+  #   db.session.commit()
+  # except Exception as e:
+  #   db.session.rollback()
+
+  return redirect(url_for('home_blueprint.properties'))  
+
 # https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=crud-data-table-for-database-with-modal-form
 # https://coderwall.com/p/ijrrpa/flask-flash-messages-as-bootstrap-alert
 # https://stackoverflow.com/questions/30106114/flask-bootstrap-combining-flash-message-in-one-block
