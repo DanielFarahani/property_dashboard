@@ -104,12 +104,12 @@ def add_properties():
 @blueprint.route('/remove-property/<int:pid>', methods=['GET'])
 @login_required
 def remove_properties(pid):
-  # try:
-  #   prop = Properties.query.get(pid)
-  #   db.session.delete(prop)
-  #   db.session.commit()
-  # except Exception as e:
-  #   db.session.rollback()
+  try:
+    prop = Properties.query.get(pid)
+    db.session.delete(prop)
+    db.session.commit()
+  except Exception as e:
+    db.session.rollback()
 
   return redirect(url_for('home_blueprint.properties'))  
 

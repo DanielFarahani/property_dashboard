@@ -47,7 +47,7 @@ class Properties(db.Model):
     valuationDate = Column(String)
     yearBuilt = Column(String)
 
-    address = db.relationship("Address", back_populates="properties")
+    address = db.relationship("Address", back_populates="properties", cascade="delete")
 
 
 # class PropertyFinancials(db.Model):
@@ -69,7 +69,7 @@ class Address(db.Model):
     state = Column(String)
     postcode = Column(Integer)
     
-    properties = db.relationship("Properties", back_populates="address")
+    properties = db.relationship("Properties", back_populates="address", cascade="delete")
 
 
 @login_manager.user_loader

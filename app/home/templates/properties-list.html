@@ -140,19 +140,20 @@
 								<div class="modal-dialog" role="document">
 									<div class="modal-content">
 										<!-- HEADER -->
-										<div class="modal-header no-bd">
-											<h5 class="modal-title">
+										<div class="modal-header">
+											<h2 class="modal-title">
 												WARNING
-											</h5>
+											</h2>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<!-- BODY -->
 										<div class="modal-body">
-											<form id="confirmDeleteForm" method="GET" action="/remove-property">
+											<form id="confirmDeleteForm" method="GET" action="">
 												<p class="text-warning">Are you sure you want to remove this property?</p>
 												<p class="text" id="prop_info_text"></p>
+												<p class="text" id="prop_id_text" hidden=true></p>
 												<div class="modal-footer no-bd">
 													<button type="submit" id="confirmDeleteButton" class="btn btn-primary">Confrim</button>
 													<button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
@@ -234,6 +235,8 @@
 		
 				//populate the textbox
 				document.getElementById('prop_info_text').innerText = propInfo;
+				// send the form action
+				document.getElementById('confirmDeleteForm').action = "/remove-property/" + propId;
 		});
 
 	</script>
