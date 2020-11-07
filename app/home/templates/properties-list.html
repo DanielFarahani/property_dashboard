@@ -1,9 +1,12 @@
 {% extends "layouts/base.html" %}
-
-{% block title %} UI Datatables {% endblock %} 
-
-<!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block title %} Property List {% endblock %} 
+{% block stylesheets %}
+	<style>
+		.pac-container {
+				z-index: 10000 !important;
+		}
+	</style>
+{% endblock stylesheets %}
 
 {% block content %}
 
@@ -40,7 +43,7 @@
 						</div>
 						
 						<div class="card-body">
-							<!-- New property form -->
+							<!-- ADD PROPERTY modal -->
 							<!-- TODO make this in to a component/jinja block -->
 							<div class="modal fade" id="addAddressModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
@@ -106,7 +109,7 @@
 									</tfoot>
 									<tbody>
 										{% for prop in properties %}
-											<tr>
+											<tr id={{prop.propertyID}} >
 												<td> 
 													<a href="/property/{{prop.propertyId}}">
 														{{ prop.address[0].street }} 
@@ -118,13 +121,12 @@
 												<td> {{ prop.carSpaces }} </td>
 												<td> {{ prop.valuation }} </td>
 												<td>
-													<form method="GET" action="/remove-property/{{prop.propertyId}}">
-														<div class="form-button-action">
-															<button type="submit" class="btn btn-link btn-danger" data-toggle="modal" data-target="#confirmDelete">
-																<i class="fas fa-trash-alt"></i>
-															</button>
-														</div>
-													</form>
+													<div class="form-button-action">
+														<button type="submit" class="btn btn-link btn-danger" data-toggle="modal" data-target="#confirmDelete"
+															data-prop-id="{{prop.propertyId}}" data-prop-info="{{prop.address[0].description}}">
+															<i class="fas fa-trash-alt fa-lg"></i>
+														</button>
+													</div>
 												</td>
 											</tr>
 										{% endfor %}
@@ -132,6 +134,7 @@
 								</table>
 							</div>
 
+							<!-- DELETE modal -->
 							<!-- TODO might be able to submiting the form through this -->
 							<div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
@@ -139,7 +142,7 @@
 										<!-- HEADER -->
 										<div class="modal-header no-bd">
 											<h5 class="modal-title">
-												<span class="fw-mediumbold">WARNING</span> 
+												WARNING
 											</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
@@ -147,15 +150,16 @@
 										</div>
 										<!-- BODY -->
 										<div class="modal-body">
-											<form id="confirmDeleteForm" method="GET" action="/delete-property">
-												<p class="small">Are you sure you want to remove property</p>
-												<!-- FOOTER -->
+											<form id="confirmDeleteForm" method="GET" action="/remove-property">
+												<p class="text-warning">Are you sure you want to remove this property?</p>
+												<p class="text" id="prop_info_text"></p>
 												<div class="modal-footer no-bd">
 													<button type="submit" id="confirmDeleteButton" class="btn btn-primary">Confrim</button>
 													<button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
 												</div>
 											</form>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -206,29 +210,34 @@
 		});
 		$('#confrimDeleteButton').modal('hide');
 
-		</script>
+	</script>
 
+	<script>
+		function initMap() {
+			var options = {
+				componentRestrictions: {country: ["aus", "nz", "uk"]}
+			};
+
+			var input = document.getElementById('addAddress');
+			var autocomplete = new google.maps.places.Autocomplete(input, options);
+			autocomplete.setFields(["address_component"]);
+			
+			$('#addAddressModal').modal('hide');
+		}
+	</script>
+	
+	<script>
+		$('#confirmDelete').on('show.bs.modal', function(e) {
+				//get prop-id attribute of the clicked element
+				var propId = $(e.relatedTarget).data('prop-id');
+				var propInfo = $(e.relatedTarget).data('prop-info');
 		
+				//populate the textbox
+				document.getElementById('prop_info_text').innerText = propInfo;
+		});
 
-		<script>
-			function initMap() {
-				var options = {
-					componentRestrictions: {country: ["aus", "nz", "uk"]}
-				};
+	</script>
 
-				var input = document.getElementById('addAddress');
-				var autocomplete = new google.maps.places.Autocomplete(input, options);
-				autocomplete.setFields(["address_component"]);
-				
-				$('#addAddressModal').modal('hide');
-			}
-		</script>
-		
-		<style>
-			.pac-container {
-					z-index: 10000 !important;
-			}
-		</style>
 
 {% endblock javascripts %}
 

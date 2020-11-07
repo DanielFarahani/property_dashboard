@@ -113,10 +113,6 @@ def remove_properties(pid):
 
   return redirect(url_for('home_blueprint.properties'))  
 
-# https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=crud-data-table-for-database-with-modal-form
-# https://coderwall.com/p/ijrrpa/flask-flash-messages-as-bootstrap-alert
-# https://stackoverflow.com/questions/30106114/flask-bootstrap-combining-flash-message-in-one-block
-
 
 @blueprint.route('/<template>')
 @login_required
