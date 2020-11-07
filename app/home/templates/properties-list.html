@@ -122,12 +122,12 @@
 												<td> {{ prop.valuation }} </td>
 												<td>
 													<div class="form-button-action">
+														<button type="submit" class="btn btn-link" onclick="location.href='/property/{{prop.propertyId}}'">
+															<i class="far fa-edit fa-lg"></i>
+														</button>
 														<button type="submit" class="btn btn-link btn-danger" data-toggle="modal" data-target="#confirmDelete"
 															data-prop-id="{{prop.propertyId}}" data-prop-info="{{prop.address[0].description}}">
 															<i class="fas fa-trash-alt fa-lg"></i>
-														</button>
-														<button type="submit" class="btn btn-link" onclick="location.href='/property/{{prop.propertyId}}'">
-															<i class="far fa-edit fa-lg"></i>
 														</button>
 													</div>
 												</td>

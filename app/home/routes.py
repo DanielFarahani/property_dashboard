@@ -75,8 +75,8 @@ def add_properties():
 
   ## store property and address
   try:
-    new_property = Properties(propertyId=pid, userId=current_user.id, bedrooms=prop_detail.get('bedrooms',0),
-      bathrooms=prop_detail.get('bathrooms',0), carSpaces=prop_detail.get('carSpaces',0), floorAreaM2=prop_detail.get('floorArea',0),
+    new_property = Properties(propertyId=pid, userId=current_user.id, bedrooms=prop_detail.get('beds',0),
+      bathrooms=prop_detail.get('baths',0), carSpaces=prop_detail.get('carSpaces',0), floorAreaM2=prop_detail.get('floorArea',0),
       landAreaM2=prop_detail.get('landArea',0), propertyType=prop_detail.get('propertyType',0), saleDate="", salePrice=0,
       valuation=0, valuationDate="", yearBuilt=prop_detail.get('yearBuilt',0))
     
