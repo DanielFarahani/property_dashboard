@@ -85,10 +85,10 @@ def add_properties():
     pc = components.pop(-1)
     sta = components.pop(-1)
     sub = components.pop(-1)
-    st = components.pop(-1)
+    st = " ".join(components)
 
-    new_address = Address(propertyId=pid, description=full_add, street=st, suburb=sub, state=sta, postcode=pc)
-    
+    new_address = Address(property_id=pid, description=full_add, street=st, suburb=sub, state=sta, postcode=pc)
+
     db.session.add(new_property)
     db.session.add(new_address)
     db.session.commit()
