@@ -30,3 +30,16 @@ _templates
 # javascript
 package-lock.json
 .vscode/symbols.json
+
+# corelogic ignores
+config.py
+.vscode
+roadmap.txt
+CoreLogic/__pycache__
+.DS_Store
+response_*
+__pycache__
+endpoints.txt
+TODO
+sandbox_data.json
+clistart.sh

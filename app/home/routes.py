@@ -7,8 +7,7 @@ from app import login_manager, db
 from jinja2 import TemplateNotFound
 from app.models import User, Properties, Address
 
-# localy importing corelogic wrapper remove in production
-sys.path.append("/Users/df/other/corelogic_pyclient")
+# HACK to deploy to heroku. Mush package the corelogic wrapper
 from corelogic.property import (suggest, search, valuations, details)
 
 
