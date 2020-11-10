@@ -8,7 +8,7 @@ from jinja2 import TemplateNotFound
 from app.models import User, Properties, Address
 
 # HACK to deploy to heroku. Mush package the corelogic wrapper
-from corelogic.property import (suggest, search, valuations, details)
+from corelogic_pyclient.corelogic.property import (suggest, search, valuations, details)
 
 
 # add data to global context for all templates

@@ -7,7 +7,7 @@ from config import config_dict
 from app import create_app, db
 
 # NOTE: Don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False)
+DEBUG = config('DEBUG', default=True)
 
 # The configuration
 get_config_mode = 'Debug' if DEBUG else 'Production'
