@@ -65,7 +65,9 @@ def register():
 
     # else we can create the user
     user = User(**request.form)
-
+    db.session.add(user)
+    db.session.commit()
+    
     return render_template('accounts/register.html', 
                             msg='User created please <a href="/login">login</a>', 
                             success=True,
