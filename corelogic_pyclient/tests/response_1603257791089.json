@@ -1,0 +1,1052 @@
+{
+  "_embedded": {
+    "propertySummaryList": [
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "1 Ahern Place Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 1,
+            "bedrooms": 1,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 962,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41406059,
+            "longitude": 149.08555996
+          },
+          "id": 1111843,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313292
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/XDHZ3LYAE4I6VFN35NRCA5RXAQ/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/XDHZ3LYAE4I6VFN35NRCA5RXAQ/resize;m=exact;w=470;h=313",
+            "scanDate": "2019-11-05",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/XDHZ3LYAE4I6VFN35NRCA5RXAQ/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "4 Ahern Place Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 1,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 806,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41373041,
+            "longitude": 149.08592711
+          },
+          "id": 1111846,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313292
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/QPVNO255VAI6NNMYVHCSTH7C5Q/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/QPVNO255VAI6NNMYVHCSTH7C5Q/resize;m=exact;w=470;h=313",
+            "scanDate": "2012-05-22",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/QPVNO255VAI6NNMYVHCSTH7C5Q/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "6 Ahern Place Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 3,
+            "isCalculatedLandArea": false,
+            "landArea": 795,
+            "lockUpGarages": 1
+          },
+          "coordinate": {
+            "latitude": -35.41349023,
+            "longitude": 149.08591151
+          },
+          "id": 1111848,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313292
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/PQB5XJF6TEI6NCJWA6F7GPV2ZY/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/PQB5XJF6TEI6NCJWA6F7GPV2ZY/resize;m=exact;w=470;h=313",
+            "scanDate": "2011-05-22",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/PQB5XJF6TEI6NCJWA6F7GPV2ZY/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House: One Storey / Lowset",
+          "propertySubTypeShort": "One Storey / Lowset",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "7 Ahern Place Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 1,
+            "bedrooms": 4,
+            "carSpaces": 1,
+            "isCalculatedLandArea": false,
+            "landArea": 913,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41351893,
+            "longitude": 149.08525977
+          },
+          "id": 1111849,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313292
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/NRNGHSQRR4I6VG56BGVE4GR7OM/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/NRNGHSQRR4I6VG56BGVE4GR7OM/resize;m=exact;w=470;h=313",
+            "scanDate": "2020-02-27",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/NRNGHSQRR4I6VG56BGVE4GR7OM/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "8 Ahern Place Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 1,
+            "bedrooms": 3,
+            "carSpaces": 1,
+            "isCalculatedLandArea": false,
+            "landArea": 750
+          },
+          "coordinate": {
+            "latitude": -35.41325849,
+            "longitude": 149.08589645
+          },
+          "id": 1111850,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313292
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/NHW5JRXMB4I6VJ65554KHJ65LA/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/NHW5JRXMB4I6VJ65554KHJ65LA/resize;m=exact;w=470;h=313",
+            "scanDate": "2020-09-01",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/NHW5JRXMB4I6VJ65554KHJ65LA/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": true,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House: One Storey / Lowset",
+          "propertySubTypeShort": "One Storey / Lowset",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "9 Ahern Place Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 708,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41347808,
+            "longitude": 149.08539256
+          },
+          "id": 1111851,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313292
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/JPLEFBXYEUI6NM4ZMM3DQI4TDA/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/JPLEFBXYEUI6NM4ZMM3DQI4TDA/resize;m=exact;w=470;h=313",
+            "scanDate": "2017-02-21",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/JPLEFBXYEUI6NM4ZMM3DQI4TDA/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House: One Storey / Lowset",
+          "propertySubTypeShort": "One Storey / Lowset",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "5 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 879
+          },
+          "coordinate": {
+            "latitude": -35.41440353,
+            "longitude": 149.09242382
+          },
+          "id": 1111864,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/FX7ICFDWZAI6PGFH2GJFTRGZ4I/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/FX7ICFDWZAI6PGFH2GJFTRGZ4I/resize;m=exact;w=470;h=313",
+            "scanDate": "2017-08-01",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/FX7ICFDWZAI6PGFH2GJFTRGZ4I/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "6 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 860,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41425014,
+            "longitude": 149.0927135
+          },
+          "id": 1111865,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/CTN6XLF6CAI6NO7GXEGMUMFK6I/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/CTN6XLF6CAI6NO7GXEGMUMFK6I/resize;m=exact;w=470;h=313",
+            "scanDate": "2015-04-23",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/CTN6XLF6CAI6NO7GXEGMUMFK6I/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "10 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 1124
+          },
+          "coordinate": {
+            "latitude": -35.41397056,
+            "longitude": 149.0926866
+          },
+          "id": 1111866,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/WIYYOSQLKQI6VGV5RFTVZVJML4/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/WIYYOSQLKQI6VGV5RFTVZVJML4/resize;m=exact;w=470;h=313",
+            "scanDate": "2020-03-03",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/WIYYOSQLKQI6VGV5RFTVZVJML4/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "15 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 1028,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41329379,
+            "longitude": 149.09229146
+          },
+          "id": 1111869,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/KEFDWI3CKAI6PKH6JUP562ZHDI/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/KEFDWI3CKAI6PKH6JUP562ZHDI/resize;m=exact;w=470;h=313",
+            "scanDate": "2017-07-06",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/KEFDWI3CKAI6PKH6JUP562ZHDI/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "17 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 1038,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41318841,
+            "longitude": 149.09202167
+          },
+          "id": 1111871,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/UOG7GRI5JAI6RGDDEPRYDYH55E/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/UOG7GRI5JAI6RGDDEPRYDYH55E/resize;m=exact;w=470;h=313",
+            "scanDate": "2018-03-01",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/UOG7GRI5JAI6RGDDEPRYDYH55E/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "18 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 785
+          },
+          "coordinate": {
+            "latitude": -35.41312114,
+            "longitude": 149.09303909
+          },
+          "id": 1111872,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/U2BHNKXIBQI6TNHQI43GKBXJKI/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/U2BHNKXIBQI6TNHQI43GKBXJKI/resize;m=exact;w=470;h=313",
+            "scanDate": "2019-09-30",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/U2BHNKXIBQI6TNHQI43GKBXJKI/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House: One Storey / Lowset",
+          "propertySubTypeShort": "One Storey / Lowset",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "21 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 1,
+            "isCalculatedLandArea": false,
+            "landArea": 697,
+            "lockUpGarages": 1
+          },
+          "coordinate": {
+            "latitude": -35.41280493,
+            "longitude": 149.09258796
+          },
+          "id": 1111875,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/PF5HCTV45QI6ND6YG4JC2WNOWA/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/PF5HCTV45QI6ND6YG4JC2WNOWA/resize;m=exact;w=470;h=313",
+            "scanDate": "2014-09-19",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/PF5HCTV45QI6ND6YG4JC2WNOWA/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "23 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 5,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 731,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41267418,
+            "longitude": 149.0927474
+          },
+          "id": 1111877,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/6YNM6ZN6DUI6NIWKGNSDZRYSGA/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/6YNM6ZN6DUI6NIWKGNSDZRYSGA/resize;m=exact;w=470;h=313",
+            "scanDate": "2006-12-15",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/6YNM6ZN6DUI6NIWKGNSDZRYSGA/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "28 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 845,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41321223,
+            "longitude": 149.0940446
+          },
+          "id": 1111881,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/MJ7YEN5YXYI6PKDCWUHSB7DE54/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/MJ7YEN5YXYI6PKDCWUHSB7DE54/resize;m=exact;w=470;h=313",
+            "scanDate": "2017-10-24",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/MJ7YEN5YXYI6PKDCWUHSB7DE54/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "34 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 1,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 729,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41391935,
+            "longitude": 149.09423764
+          },
+          "id": 1111887,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/UJWN34JB6EI6VLQLO6CZPMVLRM/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/UJWN34JB6EI6VLQLO6CZPMVLRM/resize;m=exact;w=470;h=313",
+            "scanDate": "2020-01-13",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/UJWN34JB6EI6VLQLO6CZPMVLRM/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House: One Storey / Lowset",
+          "propertySubTypeShort": "One Storey / Lowset",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "35 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 1118,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.41221239,
+            "longitude": 149.09341685
+          },
+          "id": 1111888,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/XEYRG5F46EI6NNLYR65J6ZXSIE/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/XEYRG5F46EI6NNLYR65J6ZXSIE/resize;m=exact;w=470;h=313",
+            "scanDate": "2011-07-14",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/XEYRG5F46EI6NNLYR65J6ZXSIE/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "37 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 3,
+            "bedrooms": 4,
+            "carSpaces": 3,
+            "isCalculatedLandArea": false,
+            "landArea": 885,
+            "lockUpGarages": 2
+          },
+          "coordinate": {
+            "latitude": -35.4124559,
+            "longitude": 149.09356166
+          },
+          "id": 1111890,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/BTZ4IS56AMI6NJIOZ4LCNPYPPA/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/BTZ4IS56AMI6NJIOZ4LCNPYPPA/resize;m=exact;w=470;h=313",
+            "scanDate": "2015-09-11",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/BTZ4IS56AMI6NJIOZ4LCNPYPPA/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "40 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 2,
+            "isCalculatedLandArea": false,
+            "landArea": 793
+          },
+          "coordinate": {
+            "latitude": -35.41448849,
+            "longitude": 149.09427416
+          },
+          "id": 1111893,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/QUD4AGFLTYI6RBEXWOI34AVXBE/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/QUD4AGFLTYI6RBEXWOI34AVXBE/resize;m=exact;w=470;h=313",
+            "scanDate": "2018-08-29",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/QUD4AGFLTYI6RBEXWOI34AVXBE/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      },
+      {
+        "propertySummary": {
+          "address": {
+            "singleLineAddress": "49 Alabaster Street Monash ACT 2904"
+          },
+          "attributes": {
+            "bathrooms": 2,
+            "bedrooms": 4,
+            "carSpaces": 1,
+            "isCalculatedLandArea": false,
+            "landArea": 773,
+            "lockUpGarages": 1
+          },
+          "coordinate": {
+            "latitude": -35.41316917,
+            "longitude": 149.0946637
+          },
+          "id": 1111899,
+          "locationIdentifiers": {
+            "councilAreaId": 755,
+            "localityId": 6973,
+            "postCodeId": 801726,
+            "streetId": 313667
+          },
+          "propertyPhoto": {
+            "largePhotoUrl": "https://das-web.corelogic.asia/v1/asset/SL3SEXHJSQI6NJJJWEWVR264TM/resize;m=exact;w=768;h=512",
+            "mediumPhotoUrl": "https://das-web.corelogic.asia/v1/asset/SL3SEXHJSQI6NJJJWEWVR264TM/resize;m=exact;w=470;h=313",
+            "scanDate": "2017-01-16",
+            "thumbnailPhotoUrl": "https://das-web.corelogic.asia/v1/asset/SL3SEXHJSQI6NJJJWEWVR264TM/resize;m=exact;w=120;h=80"
+          },
+          "propertyStatus": {
+            "otmForRent": false,
+            "otmForSale": false,
+            "recentSale": false
+          },
+          "propertySubType": "House",
+          "propertyType": "HOUSE"
+        }
+      }
+    ]
+  },
+  "_links": {
+    "first": {
+      "href": "https://search-sandbox-api.amp.corelogic.asia/search/au/property/postcode/801726?page=0&size=20&sort=address,asc"
+    },
+    "self": {
+      "href": "https://search-sandbox-api.amp.corelogic.asia/search/au/property/postcode/801726"
+    },
+    "next": {
+      "href": "https://search-sandbox-api.amp.corelogic.asia/search/au/property/postcode/801726?page=1&size=20&sort=address,asc"
+    },
+    "last": {
+      "href": "https://search-sandbox-api.amp.corelogic.asia/search/au/property/postcode/801726?page=38&size=20&sort=address,asc"
+    }
+  },
+  "page": {
+    "number": 0,
+    "size": 20,
+    "totalElements": 764,
+    "totalPages": 39
+  }
+}
+
+
+{
+  "endpoint": "/places/places/suggest",
+  {
+    "latitude":-37.914221,
+    "longitude":145.128686,
+    "placeId":3741,
+    "placeName":"John Monash Science School",
+    "placeType":"school",
+    "state":"VIC"
+  },
+  {
+      "latitude":-37.9206178,
+      "longitude":145.1218835,
+      "placeId":14811,
+      "placeName":"Lyndale Secondary College-Monash Adolescent Psychiatric Centre",
+      "placeType":"school",
+      "state":"VIC"
+  },
+  {
+      "latitude":-35.414563,
+      "longitude":149.089667,
+      "placeId":11694,
+      "placeName":"Monash Primary School",
+      "placeType":"school",
+      "state":"ACT"
+  },
+  {
+      "latitude":-34.2363,
+      "longitude":140.559,
+      "placeId":5037,
+      "placeName":"Monash Primary and Preschool",
+      "placeType":"school",
+      "state":"SA"
+  },
+  {
+      "latitude":-37.906879,
+      "longitude":145.166283,
+      "placeId":5038,
+      "placeName":"Monash Special Developmental School",
+      "placeType":"school",
+      "state":"VIC"
+  }
+}
+
+
+{
+  "endpoint": '/property/au/parcel/suggest.json',
+  "suggestions":[
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13233228,
+        "postcodeId":801726,
+        "propertyId":1112827,
+        "stateId":8,
+        "streetId":311905,
+        "suggestion":"MONASH: Block 1, Section 1 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13328673,
+        "postcodeId":801726,
+        "propertyId":1113703,
+        "stateId":8,
+        "streetId":310399,
+        "suggestion":"MONASH: Block 1, Section 106 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13278347,
+        "postcodeId":801726,
+        "propertyId":1112179,
+        "stateId":8,
+        "streetId":314732,
+        "suggestion":"MONASH: Block 1, Section 107 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13229845,
+        "postcodeId":801726,
+        "propertyId":1112162,
+        "stateId":8,
+        "streetId":314732,
+        "suggestion":"MONASH: Block 1, Section 112 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13377188,
+        "postcodeId":801726,
+        "propertyId":1112730,
+        "stateId":8,
+        "streetId":314026,
+        "suggestion":"MONASH: Block 1, Section 115 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13206702,
+        "postcodeId":801726,
+        "propertyId":1113463,
+        "stateId":8,
+        "streetId":313622,
+        "suggestion":"MONASH: Block 1, Section 119 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13198868,
+        "postcodeId":801726,
+        "propertyId":1112774,
+        "stateId":8,
+        "streetId":314488,
+        "suggestion":"MONASH: Block 1, Section 121 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13336110,
+        "postcodeId":801726,
+        "propertyId":1113704,
+        "stateId":8,
+        "streetId":312951,
+        "suggestion":"MONASH: Block 1, Section 123 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13243167,
+        "postcodeId":801726,
+        "propertyId":1112831,
+        "stateId":8,
+        "streetId":311830,
+        "suggestion":"MONASH: Block 1, Section 124 Monash ACT"
+     },
+     {
+        "councilAreaId":755,
+        "isBodyCorporate":False,
+        "isUnit":False,
+        "localityId":6973,
+        "parcelId":13306840,
+        "postcodeId":801726,
+        "propertyId":1113621,
+        "stateId":8,
+        "streetId":308916,
+        "suggestion":"MONASH: Block 1, Section 126 Monash ACT"
+     }
+  ]
+}
+
+{
+  "endpoint": '/property/au/v2/suggest.json',
+  "suggestions":[
+    {
+      "councilAreaId":755,
+      "countryId":113,
+      "isBodyCorporate":False,
+      "isUnit":False,
+      "localityId":6973,
+      "postcodeId":801726,
+      "stateId":8,
+      "suggestion":"Monash ACT 2904",
+      "suggestionType":"locality"
+    },
+    {
+      "councilAreaId":197,
+      "countryId":113,
+      "isBodyCorporate":False,
+      "isUnit":False,
+      "localityId":9417,
+      "postcodeId":700176,
+      "stateId":7,
+      "streetId":2131,
+      "suggestion":"Monash Court Durack NT 0830",
+      "suggestionType":"street"
+    }],
+    "systemInfo":{
+      "instanceName":"59:8080",
+      "requestDate":"2020-10-23T11:00:14.385+10:00"
+    }
+}
+
+
+{
+  "propertySummary":{
+     "address":{
+        "singleLineAddress":"49 Alabaster Street Monash ACT 2904"
+     },
+     "attributes":{
+        "bathrooms":2,
+        "bedrooms":4,
+        "carSpaces":1,
+        "isCalculatedLandArea":False,
+        "landArea":773,
+        "lockUpGarages":1
+     },
+     "coordinate":{
+        "latitude":-35.41316917,
+        "longitude":149.0946637
+     },
+     "id":1111899,
+     "isActiveProperty":True,
+     "locationIdentifiers":{
+        "councilAreaId":755,
+        "localityId":6973,
+        "postCodeId":801726,
+        "streetId":313667
+     },
+     "propertyPhoto":{
+        "largePhotoUrl":"https://das-web.corelogic.asia/v1/asset/SL3SEXHJSQI6NJJJWEWVR264TM/resize;m=exact;w=768;h=512",
+        "mediumPhotoUrl":"https://das-web.corelogic.asia/v1/asset/SL3SEXHJSQI6NJJJWEWVR264TM/resize;m=exact;w=470;h=313",
+        "scanDate":"2017-01-16",
+        "thumbnailPhotoUrl":"https://das-web.corelogic.asia/v1/asset/SL3SEXHJSQI6NJJJWEWVR264TM/resize;m=exact;w=120;h=80"
+     },
+     "propertyStatus":{
+        "otmForRent":False,
+        "otmForSale":False,
+        "recentSale":False
+     },
+     "propertySubType":"House",
+     "propertyType":"HOUSE"
+  }
+}
