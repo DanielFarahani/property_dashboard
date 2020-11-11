@@ -71,6 +71,7 @@ def register():
                             success=True,
                             form=create_account_form)
 
+  # GET route
   else:
     return render_template('accounts/register.html', form=create_account_form)
 
